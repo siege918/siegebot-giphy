@@ -1,0 +1,26 @@
+{
+  "name": "siegebot-giphy",
+  "version": "1.0.0",
+  "description": "Siegebot plugin for searching for gifs through the Giphy API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siege918/siegebot-giphy.git"
+  },
+  "keywords": [
+    "siegebot",
+    "gif"
+  ],
+  "author": "Collin Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siege918/siegebot-giphy/issues"
+  },
+  "homepage": "https://github.com/siege918/siegebot-giphy#readme",
+  "dependencies": {
+    "giphy-api": "^2.0.1"
+  }
+}
