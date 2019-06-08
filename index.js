@@ -21,7 +21,7 @@ function giphyPromise(message, config, callback) {
         }
     ).then((res) => {
         message.channel.send({
-            files: [res.data[0].embed_url]
+            files: [res.data[0].images.original.url]
         });
         callback(res.data[0]);
     })
