@@ -11,6 +11,17 @@ function giphy(message, config) {
 }
 
 function giphyPromise(message, config, callback) {
+    let apiKey = null;
+    if (config.apikeyEnv) {
+        apiKey = process.env[config.apikeyEnv];
+    } else if (config.apikey) {
+        apiKey = config.apiKey;
+    } else {
+        message.channel.send("Giphy was not configured correctly.");
+        callback(null);
+        return;
+    }
+
     const giphy = giphyConnect(config.apikey);
     const q = message.content.substring(message.content.indexOf(' ')).trim();
     giphy.search(
