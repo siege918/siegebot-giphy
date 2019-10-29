@@ -28,12 +28,13 @@ function giphyPromise(message, config, callback) {
         {
             q,
             rating: 'g',
-            limit: 1
+            limit: 10
         }
     ).then((res) => {
+        let index = Math.floor(Math.random() * res.data.length)
         message.channel.send({
-            files: [res.data[0].images.original.url]
+            files: [res.data[index].images.original.url]
         });
-        callback(res.data[0]);
+        callback(res.data[index]);
     })
 }
